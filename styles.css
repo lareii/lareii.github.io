@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Hack';
+    src: local('/assets/Hack-Regular.ttf');
+}
+
+body {
+    background-color: #191724;
+    font-family: 'Hack', monospace !important;
+    color: #e0def4;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+a {
+    text-decoration-line: underline !important;
+}
+
+.terminal {
+    overflow-y:scroll;
+    border-radius: 4px;
+    border: 2px solid #ebbcba;
+    scrollbar-width: none;
+}
+
+.terminal::-webkit-scrollbar {
+    display: none !important;
+}
+
+.user { color: #eb6f92 }
+.directory { color: #9ccfd8 }
+.symbols { color: #56526e; }
