@@ -91,6 +91,10 @@ input.keydown(function (event) {
         input.val('');
     }
 
+    if (key == 8 && input_value == "") {
+        beep()
+    }
+
     if (key == 38) { // arrow up - next
         if (count > -command_history.length + 1) {
             count -= 1
