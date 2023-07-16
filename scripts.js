@@ -27,7 +27,7 @@ const prompt = `<span class="user">you@larei-website</span><span class="symbols"
 
 const files = {
     'about_me.txt': `hi, i'm emirhan (a.k.a. larei) and i'm 17.<br>i like listening to music, math and programming.<br>isn't that enough?`,
-    'social.txt': `["<a target="_blank" href="https://github.com/lareithen">github</a>", "<a target="_blank" href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn">spotify</a>", "<a target="_blank" href="https://mastodon.com.tr/@larei">mastodon</a>", "<a target="_blank" href="https://www.reddit.com/user/Lareithen">reddit</a>", "<a target="_blank" href="https://discord.com/users/748539900793716887">discord</a>", "<a target="_blank" href="https://anilist.co/user/larei/">anilist</a>"]`
+    'social.txt': `["<a target="_blank" href="https://github.com/lareii">github</a>", "<a target="_blank" href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn">spotify</a>", "<a target="_blank" href="https://mastodon.com.tr/@larei">mastodon</a>", "<a target="_blank" href="https://www.reddit.com/user/Lareithen">reddit</a>", "<a target="_blank" href="https://discord.com/users/748539900793716887">discord</a>", "<a target="_blank" href="https://anilist.co/user/larei/">anilist</a>"]`
 }
 
 const commands = {
