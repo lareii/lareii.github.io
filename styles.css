@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Hack';
-    src: local('/assets/Hack-Regular.ttf');
+    font-family: 'Code';
+    src: url('./assets/CascadiaCode.ttf')
 }
 
 body {
     background-color: #191724;
-    font-family: 'Hack', monospace !important;
+    font-family: 'Code';
     color: #e0def4;
 
     animation: fadeInAnimation ease 3s;
