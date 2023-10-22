@@ -100,14 +100,16 @@ export default {
     </div>
   </main>
 
-  <div class="bg-[var(--color-primary)]">1</div>
-  <div class="bg-[var(--color-secondary)]">2</div>
-  <div class="bg-[var(--color-tertiary)]">3</div>
-  <div class="bg-[var(--color-quaternary)]">4</div>
-  <div class="bg-[var(--color-quinary)]">5</div>
-  <div class="bg-[var(--color-senary)]">6</div>
-  <div class="bg-[var(--color-septenary)]">7</div>
-  <div class="bg-[var(--color-octonary)]">8</div>
-  
+  <!--
+    <div class="bg-[var(--color-primary)]">1</div>
+    <div class="bg-[var(--color-secondary)]">2</div>
+    <div class="bg-[var(--color-tertiary)]">3</div>
+    <div class="bg-[var(--color-quaternary)]">4</div>
+    <div class="bg-[var(--color-quinary)]">5</div>
+    <div class="bg-[var(--color-senary)]">6</div>
+    <div class="bg-[var(--color-septenary)]">7</div>
+    <div class="bg-[var(--color-octonary)]">8</div>
+  -->
+
   
 </template>
