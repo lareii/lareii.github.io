@@ -23,13 +23,9 @@ export default {
     <TheWindow class="mb-3" title="about_meeee.md" :decorations="3">
       <div class="font-black text-5xl">
         it's 
-        <span class="bg-[var(--color-quinary)]">
-          emirhan!
-          <span class="text-[10px]">a.k.a. larei</span>
+        <span class="bg-[var(--color-quinary)]">emirhan!<span class="text-[10px]">a.k.a. larei</span>
         </span>
-        <span id="emoji" @dblclick="changeEmoji" class="text-[2rem] select-none">
-          ✨
-        </span>
+        <span id="emoji" @dblclick="changeEmoji" class="text-[2rem] select-none">✨</span>
       </div>
       <div class="font-bold text-lg mb-2">
         17 years-old, university student. self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
