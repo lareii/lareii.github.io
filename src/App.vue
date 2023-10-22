@@ -46,7 +46,7 @@ export default {
       </TheWindow>
     </div>
 
-    <div class="flex max-sm:flex-col justify-between items-center gap-3">
+    <div class="flex max-sm:flex-col justify-between gap-3">
       <div class="flex flex-wrap justify-center text-2xl gap-2">
         <TheButton color="secondary" class="w-12 text-center">
           <a href="https://github.com/lareii" target="_blank">
@@ -74,7 +74,7 @@ export default {
           </a>
         </TheButton>
       </div>
-    <TheButton color="octonary" class="w-fit py-2">
+    <TheButton color="octonary" class="flex items-center w-fit px-2">
       <a class="font-bold"
         href="https://github.com/lareii/lareii.github.io" target="_blank">
         gimme a ⭐

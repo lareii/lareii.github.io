@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div :class="`bg-[var(--color-${color})] shadow-solid rounded-xl border-4 border-black p-1 hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none`">
+  <div :class="`bg-[var(--color-${color})] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none`">
     <slot />
   </div>
 </template>
