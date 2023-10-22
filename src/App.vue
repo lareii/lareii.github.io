@@ -1,11 +1,13 @@
 <script>
 import TheWindow from './components/TheWindow.vue';
 import TheTerminal from './components/TheTerminal.vue';
+import TheButton from './components/TheButton.vue';
 
 export default {
   components: {
     TheWindow,
-    TheTerminal
+    TheTerminal,
+    TheButton,
   },
   methods: {
     changeEmoji() {
@@ -23,8 +25,9 @@ export default {
     <TheWindow class="mb-3" title="about_meeee.md" :decorations="3">
       <div class="font-black text-5xl">
         it's 
-        <span class="bg-[var(--color-quinary)]">emirhan!<span class="text-[10px]">a.k.a. larei</span>
+        <span class="whitespace-nowrap bg-[var(--color-quinary)]">emirhan!<span class="text-[10px]">a.k.a. larei</span>
         </span>
+        &nbsp;
         <span id="emoji" @dblclick="changeEmoji" class="text-[2rem] select-none">✨</span>
       </div>
       <div class="font-bold text-lg mb-2">
@@ -56,36 +59,44 @@ export default {
     </div>
 
     <div class="flex max-sm:flex-col justify-between items-center gap-3">
-      <div class="flex flex-wrap text-2xl gap-2">
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-secondary)]"
-          href="https://github.com/lareii" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-github" />
-        </a>
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-tertiary)]"
-          href="https://www.linkedin.com/in/emirhan-b-38a913297/" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-linkedin" />
-        </a>
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-quaternary)]"
-          href="https://discord.com/users/748539900793716887" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-discord" />
-        </a>
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-quinary)]"
-          href="https://reddit.com/u/lareidev" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-reddit" />
-        </a>
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-senary)]"
-          href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-spotify" />
-        </a>
-        <a class="p-1 h-10 w-10 shadow-solid border-2 border-black text-center rounded-xl bg-[var(--color-septenary)]"
-          href="https://mastodon.com.tr/@larei" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-mastodon" />
-        </a>
+      <div class="flex flex-wrap justify-center text-2xl gap-2">
+        <TheButton color="secondary" class="w-12 text-center">
+          <a href="https://github.com/lareii" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </a>
+        </TheButton>
+        <TheButton color="tertiary" class="w-12 text-center">
+          <a href="https://www.linkedin.com/in/emirhan-b-38a913297/" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-linkedin" />
+          </a>
+        </TheButton>
+        <TheButton color="quaternary" class="w-12 text-center">
+          <a href="https://discord.com/users/748539900793716887" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-discord" />
+          </a>
+        </TheButton>
+        <TheButton color="quinary" class="w-12 text-center">
+          <a href="https://reddit.com/u/lareidev" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-reddit" />
+          </a>
+        </TheButton>
+        <TheButton color="senary" class="w-12 text-center">
+          <a href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-spotify" />
+          </a>
+        </TheButton>
+        <TheButton color="septenary" class="w-12 text-center">
+          <a href="https://mastodon.com.tr/@larei" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-mastodon" />
+          </a>
+        </TheButton>
       </div>
-      <a class="py-1 px-2 h-10 shadow-solid border-2 border-black text-center rounded-xl bg-white font-bold"
+    <TheButton color="octonary" class="w-fit">
+      <a class="font-bold"
         href="https://github.com/lareii/lareii.github.io" target="_blank">
         gimme a ⭐
       </a>
+    </TheButton>
     </div>
   </main>
 </template>
