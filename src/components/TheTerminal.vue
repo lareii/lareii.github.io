@@ -1,7 +1,7 @@
 <script>
 export default {
   mounted() {
-    const prompt = '[you@lareii.github.io ~]$&nbsp;'
+    const prompt = '[you@larei.is-a.dev ~]$&nbsp;'
 
     const terminal_element = this.$parent.$el.children.item(1).children.item(0)
     const prompt_element = document.getElementById('prompt')

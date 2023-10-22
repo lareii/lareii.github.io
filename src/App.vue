@@ -8,14 +8,6 @@ export default {
     TheWindow,
     TheTerminal,
     TheButton,
-  },
-  methods: {
-    changeEmoji() {
-      const emoji = document.getElementById('emoji')
-
-      emoji.innerText = (emoji.innerText == '✨' ? '✌️' : '✨')
-      document.title = (document.title == '✨' ? '✌️' : '✨')
-    }
   }
 }
 </script>
@@ -23,12 +15,8 @@ export default {
 <template>
   <main class="sm:pt-20 relative max-w-screen-md mx-auto p-5">
     <TheWindow class="mb-3" title="about_meeee.md" :decorations="3">
-      <div class="font-black text-5xl">
-        it's 
-        <span class="whitespace-nowrap bg-[var(--color-quinary)]">emirhan!<span class="text-[10px]">a.k.a. larei</span>
-        </span>
-        &nbsp;
-        <span id="emoji" @dblclick="changeEmoji" class="text-[2rem] select-none">✨</span>
+      <div class="font-black text-5xl content-center">
+        it's <span class="bg-[var(--color-quinary)]">emirhan!</span>
       </div>
       <div class="font-bold text-lg mb-2">
         17 years-old, university student. self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
@@ -85,13 +73,8 @@ export default {
             <font-awesome-icon icon="fa-brands fa-spotify" />
           </a>
         </TheButton>
-        <TheButton color="septenary" class="w-12 text-center">
-          <a href="https://mastodon.com.tr/@larei" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-mastodon" />
-          </a>
-        </TheButton>
       </div>
-    <TheButton color="octonary" class="w-fit">
+    <TheButton color="octonary" class="w-fit py-2">
       <a class="font-bold"
         href="https://github.com/lareii/lareii.github.io" target="_blank">
         gimme a ⭐
