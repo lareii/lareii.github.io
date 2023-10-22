@@ -19,10 +19,6 @@ jobs:
         run: |
           npm ci
           npm run build
-      
-      - name: create cname
-        run: |
-          echo "larei.is-a.dev" > ./dist/CNAME
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4
