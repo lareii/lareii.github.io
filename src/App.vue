@@ -46,23 +46,23 @@ export default {
 
     <div class="flex max-sm:flex-col justify-between items-center gap-3">
       <div class="flex flex-wrap justify-center text-2xl gap-2">
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-secondary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://github.com/lareii" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-secondary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://github.com/lareii" target="_blank">
           <font-awesome-icon icon="fa-brands fa-github" />
         </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://www.linkedin.com/in/emirhan-b-38a913297/" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://www.linkedin.com/in/emirhan-b-38a913297/" target="_blank">
           <font-awesome-icon icon="fa-brands fa-linkedin" />
         </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quinary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://discord.com/users/748539900793716887" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quinary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://discord.com/users/748539900793716887" target="_blank">
           <font-awesome-icon icon="fa-brands fa-discord" />
         </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quaternary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://reddit.com/u/lareidev" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quaternary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://reddit.com/u/lareidev" target="_blank">
           <font-awesome-icon icon="fa-brands fa-reddit" />
         </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-senary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-senary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn" target="_blank">
           <font-awesome-icon icon="fa-brands fa-spotify" />
         </a>
       </div>
-      <a class="flex items-center justify-center h-12 px-2 font-bold bg-white shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none" href="https://github.com/lareii/lareii.github.io" target="_blank">
+      <a class="flex items-center justify-center h-12 px-2 font-bold bg-white shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://github.com/lareii/lareii.github.io" target="_blank">
       gimme a ⭐
     </a>
     </div>
