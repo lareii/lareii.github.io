@@ -12,7 +12,7 @@ export default {
 
 <template>
   <main class="sm:pt-20 relative max-w-screen-md mx-auto p-5">
-    <TheWindow class="mb-3" title="about_meeee.md" :decorations="3">
+    <TheWindow class="mb-3" title="about_me.md" :decorations="3">
       <div class="font-black text-5xl content-center">
         it's <span class="bg-[var(--color-quinary)]">emirhan!</span>
       </div>
