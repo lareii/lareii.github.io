@@ -91,7 +91,7 @@ export default {
         this.history.innerHTML = ''
         this.append_history(cmd, '')
       } else if (cmd == 'help') {
-        this.append_history(cmd, 'help yourself')
+        this.append_history(cmd, 'help: guess what?<br>ls: lists directory contents.<br>cat: prints the file content.<br>clear: clears the terminal history.<br>')
       } else if (cmd == 'whoami') {
         this.append_history(cmd, 'you')
       } else if (cmd == 'ls') {
