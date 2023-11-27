@@ -17,7 +17,7 @@ export default {
         it's <span class="bg-[var(--color-quinary)]">emirhan!</span>
       </div>
       <div class="font-bold text-lg mb-2">
-        emirhan (aka larei), 17 years-old, mathematics student. self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
+        emirhan (aka larei), 17 years-old. mathematics student, self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
           ipsum*</i>
       </div>
     </TheWindow>
