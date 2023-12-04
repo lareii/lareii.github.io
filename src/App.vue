@@ -49,7 +49,7 @@ export default {
         <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-secondary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://github.com/lareii" target="_blank">
           <font-awesome-icon icon="fa-brands fa-github" />
         </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://www.linkedin.com/in/emirhan-b-38a913297/" target="_blank">
+        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://www.linkedin.com/in/emirhanbb/" target="_blank">
           <font-awesome-icon icon="fa-brands fa-linkedin" />
         </a>
         <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quinary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://discord.com/users/748539900793716887" target="_blank">
