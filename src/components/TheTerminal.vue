@@ -101,7 +101,7 @@ export default {
 
         if (file) {
           if (file == 'about_me.md') {
-            this.append_history(cmd, "it's emirhan!<br>emirhan (aka larei), 17 years-old. mathematics student, self-taught developer, open-source enthusiast. programming, music, math. *insert here some lorem ipsum*")
+            this.append_history(cmd, "it's emirhan!<br>emirhan (aka larei), 18 years-old. mathematics student, self-taught developer, open-source enthusiast. programming, music, math. *insert here some lorem ipsum*")
           } else if (file == 'todo_list.md') {
             this.append_history(cmd, '- birth<br><br>- learn<br>- explore<br>- study<br>- university<br>- career<br>- work<br>- love<br>- die')
           } else {
