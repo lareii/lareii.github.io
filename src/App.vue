@@ -14,7 +14,7 @@ export default {
   <main class="sm:pt-20 relative max-w-screen-md mx-auto p-5">
     <TheWindow class="mb-3" title="about_me.md" :decorations="3">
       <div class="font-black text-5xl content-center">
-        it's <span class="bg-[var(--color-quinary)]">emirhan!</span>
+        it's <span class="bg-[var(--color-quinary)]">emirhan!</span> ✨
       </div>
       <div class="font-bold text-lg mb-2">
         emirhan (aka larei), 18 years-old. mathematics student, self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
