@@ -25,14 +25,11 @@ export default {
     <div class="flex max-sm:flex-col gap-3 mb-3">
       <TheWindow class="sm:basis-1/3" :decorations="1" color="quaternary" title="todo_list.md">
         <div class="font-bold h-40 overflow-y-auto no-scrollbar">
-          <div>- <s>birth</s></div>
-          <div>- <s>learn</s></div>
+          <div>- <s>born</s></div>
           <div>- <s>explore</s></div>
-          <div>- <s>study</s></div>
-          <div>- university</div>
-          <div>- career</div>
+          <div>- <s>learn</s></div>
+          <div>- study</div>
           <div>- work</div>
-          <div>- love</div>
           <div>- die</div>
         </div>
       </TheWindow>
