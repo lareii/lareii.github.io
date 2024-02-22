@@ -5,16 +5,20 @@ const projects = ['lareii.github.io', 'autopull', 'ytm-discord-rpc', 'cubot']
 const repos = ref([]);
 
 onMounted(async () => {
-  const response = await fetch('https://api.github.com/users/lareii/repos');
-  if (!response.ok) {
-    return;
-  }
-  const data = await response.json();
-  for (const item of data) {
-    if (projects.includes(item.name)) {
-      repos.value.push(item);
-    }
-  }
+  await fetch('https://api.github.com/users/lareii/repos')
+    .then(response => response.json())
+    .then(data => {
+      data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+      data.forEach(repo => {
+        if (projects.includes(repo.name)) {
+          repos.value.push(repo);
+        }
+      });
+    })
+    .catch(() => {
+      return;
+    });
 })
 </script>
 
@@ -22,7 +26,8 @@ onMounted(async () => {
   <div class="mb-2 font-black text-2xl">projects/</div>
   <div class="grid md:grid-cols-2 gap-2">
     <div v-if="!repos.length">projects could not be retrieved.</div>
-    <a v-for="repo in repos" :href="repo.html_url" target="_blank" class="flex flex-col justify-between px-5 py-3 bg-[#202020]/[.3] border-[#504945] border-[0.5px] rounded-lg text-sm">
+    <a v-for="repo in repos" :href="repo.html_url" target="_blank"
+      class="flex flex-col justify-between px-5 py-3 bg-[#202020]/[.3] border-[#504945] border-[0.5px] rounded-lg text-sm">
       <div class="flex items-center gap-1 text-[var(--color-secondary)]">
         <img :src="repo.owner.avatar_url" class="rounded-full w-4">
         {{ repo.owner.login }}
