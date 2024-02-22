@@ -1,80 +1,17 @@
-<script>
-import TheWindow from './components/TheWindow.vue';
-import TheTerminal from './components/TheTerminal.vue';
-
-export default {
-  components: {
-    TheWindow,
-    TheTerminal,
-  }
-}
+<script setup>
+import Header from './components/Header.vue';
+import Uses from './components/Uses.vue';
+import Projects from './components/Projects.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <main class="sm:pt-20 relative max-w-screen-md mx-auto p-5">
-    <TheWindow class="mb-3" title="about_me.md" :decorations="3">
-      <div class="font-black text-5xl content-center">
-        it's <span class="bg-[var(--color-quinary)]">emirhan!</span> ✨
-      </div>
-      <div class="font-bold text-lg mb-2">
-        emirhan (aka larei), 18 years-old. mathematics student, self-taught developer, open-source enthusiast. programming, music, math. <i>*insert here some lorem
-          ipsum*</i>
-      </div>
-    </TheWindow>
-
-    <div class="flex max-sm:flex-col gap-3 mb-3">
-      <TheWindow class="sm:basis-1/3" :decorations="1" color="quaternary" title="todo_list.md">
-        <div class="font-bold h-40 overflow-y-auto no-scrollbar">
-          <div>- <s>born</s></div>
-          <div>- <s>explore</s></div>
-          <div>- <s>learn</s></div>
-          <div>- study</div>
-          <div>- work</div>
-          <div>- die</div>
-        </div>
-      </TheWindow>
-
-      <TheWindow class="sm:basis-2/3 sm:w-0" color="tertiary" title="terminal.sh" :decorations="1">
-        <div class="h-40 w-full overflow-auto no-scrollbar whitespace-nowrap">
-          <TheTerminal />
-        </div>
-      </TheWindow>
-    </div>
-
-    <div class="flex max-sm:flex-col justify-between items-center gap-3">
-      <div class="flex flex-wrap justify-center text-2xl gap-2">
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-secondary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://github.com/lareii" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-github" />
-        </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-tertiary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://www.linkedin.com/in/emirhanbb/" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-linkedin" />
-        </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quinary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://discord.gg/6FwNtZdbWH" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-discord" />
-        </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-quaternary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://reddit.com/u/lareidev" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-reddit" />
-        </a>
-        <a class="flex items-center justify-center w-12 h-12 text-2xl bg-[var(--color-senary)] shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://open.spotify.com/user/800b0v2zx3p2n6apxfh2bwcfn" target="_blank">
-          <font-awesome-icon icon="fa-brands fa-spotify" />
-        </a>
-      </div>
-      <a class="flex items-center justify-center h-12 px-2 font-bold bg-white shadow-solid rounded-xl border-4 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100" href="https://github.com/lareii/lareii.github.io" target="_blank">
-      gimme a ⭐
-    </a>
-    </div>
+  <main class="sm:pt-20 max-w-screen-lg mx-auto p-5 relative">
+    <div class="z-0 absolute -mt-10 right-0 text-[10rem] opacity-10 select-none">✨</div>
+    <div class="relative mb-10"><Header /></div>
+    <div class="mb-10"><Uses /></div>
+    <div class="z-0 absolute -ml-14 mt-10 text-[10rem] opacity-10 select-none">👨‍💻</div>
+    <div class="relative mb-10"><Projects /></div>
+    <div><Footer /></div>
   </main>
-
-  <!--
-    <div class="bg-[var(--color-primary)]">1</div>
-    <div class="bg-[var(--color-secondary)]">2</div>
-    <div class="bg-[var(--color-tertiary)]">3</div>
-    <div class="bg-[var(--color-quaternary)]">4</div>
-    <div class="bg-[var(--color-quinary)]">5</div>
-    <div class="bg-[var(--color-senary)]">6</div>
-    <div class="bg-[var(--color-septenary)]">7</div>
-    <div class="bg-[var(--color-octonary)]">8</div>
-  -->
-
-  
 </template>

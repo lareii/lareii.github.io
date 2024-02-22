@@ -1,31 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 
 @import './base.css';
 
-::-moz-selection,
-::selection
-{
-  background: var(--color-quinary);
-}
-
-* {
-  cursor: url('/cursor.png'), auto !important;
-}
-
-body {
-  background: conic-gradient(from 90deg at 1px 1px, var(--color-primary) 90deg, black 0) -2px -2px/50px 50px;
-}
-
-.shadow-solid {
-  box-shadow: 5px 5px 0px 0px black;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+::selection {
+  background: var(--color-secondary);
+  color: var(--color-trinary);
 }

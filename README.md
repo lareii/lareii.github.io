@@ -1,7 +1,7 @@
-![](/public/screenshot.png)
+![](./public/screenshot.png)
 
-# lareii.github.io
-✨ My personal website.
+# babaoglu.dev
+🌐 My personal website.
 
 ## Getting Started
 You can get started by cloning the project to your local machine. Make sure you have [Node.js](https://nodejs.org/) installed before you begin.
@@ -9,12 +9,12 @@ You can get started by cloning the project to your local machine. Make sure you 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/lareii/lareii.github.io
+git clone https://github.com/lareii/babaoglu.dev
 ```
 
 2. Navigate to the project folder:
 ```bash
-cd lareii.github.io
+cd babaoglu.dev
 ```
 
 3. Install the dependencies:
