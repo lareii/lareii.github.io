@@ -10,12 +10,6 @@ import { faGithub, faLinkedin, faDiscord, faSpotify } from '@fortawesome/free-br
 
 library.add(faGithub, faLinkedin, faDiscord, faSpotify, faStar, faCodeBranch)
 
-const cursor = document.getElementById("cursor");
-document.body.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px",
-  cursor.style.top = e.clientY + "px";
-});
-
 createApp(App)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount('#app')
