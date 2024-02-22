@@ -1,6 +1,6 @@
 ![](./public/screenshot.png)
 
-# babaoglu.dev
+# lareii.github.io
 🌐 My personal website.
 
 ## Getting Started
@@ -9,12 +9,12 @@ You can get started by cloning the project to your local machine. Make sure you 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/lareii/babaoglu.dev
+git clone https://github.com/lareii/lareii.github.io
 ```
 
 2. Navigate to the project folder:
 ```bash
-cd babaoglu.dev
+cd lareii.github.io
 ```
 
 3. Install the dependencies:
