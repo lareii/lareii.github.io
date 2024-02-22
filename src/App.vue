@@ -10,7 +10,7 @@ import Footer from './components/Footer.vue';
     <div class="z-0 absolute -mt-10 right-0 text-[10rem] opacity-10 select-none">✨</div>
     <div class="relative mb-10"><Header /></div>
     <div class="mb-10"><Uses /></div>
-    <div class="z-0 absolute -ml-14 mt-10 text-[10rem] opacity-10 select-none">👨‍💻</div>
+    <div class="z-0 absolute mt-10 text-[10rem] opacity-10 select-none">👨‍💻</div>
     <div class="relative mb-10"><Projects /></div>
     <div><Footer /></div>
   </main>

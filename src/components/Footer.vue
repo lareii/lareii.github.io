@@ -14,11 +14,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex justify-between mt-10 text-sm text-[var(--color-secondary)]">
+  <div class="flex justify-between mt-10 gap-5 text-sm text-[var(--color-secondary)]">
     <div v-if="commit">
       <font-awesome-icon :icon="['fas', 'code-branch']" />
       {{ commit.sha.slice(0, 7) }} — {{ commit.commit.message }}
     </div>
-    <a href="https://github.com/lareii/lareii.github.io" target="_blank" class="underline">gimme a ⭐</a>
+    <a href="https://github.com/lareii/lareii.github.io" target="_blank" class="whitespace-nowrap underline">gimme a ⭐</a>
   </div>
 </template>
