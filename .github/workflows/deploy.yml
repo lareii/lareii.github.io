@@ -1,0 +1,32 @@
+name: build & deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install & build
+        run: |
+          npm ci
+          npm run build
+      
+      - name: create cname
+        run: |
+          echo "babaoglu.dev" > ./dist/CNAME
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: production
