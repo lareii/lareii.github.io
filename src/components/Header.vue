@@ -31,7 +31,7 @@ onMounted(async () => {
   <div class="font-sans font-black text-5xl">
     babaoglu<span :class="['text-2xl', status]">.dev</span>
   </div>
-  <div>emirhan (aka larei), 18 years-old. mathematics student, self-taught developer, <a href="https://www.youtube.com/watch?v=9sJUDx7iEJw" target="_blank" class="underline">open-source</a> enthusiast. programming, music, math. *insert here some lorem ipsum*</div>
+  <div>emirhan (aka larei), 18 years-old. mathematics student, self-taught developer, <a href="https://www.youtube.com/watch?v=9sJUDx7iEJw" target="_blank" class="underline">open-source</a> enthusiast. programming, music, math.</div>
   <div class="flex gap-2 text-sm text-[var(--color-secondary)]">
     <font-awesome-icon :icon="['fab', 'spotify']" class="mt-[3px]" />
     <div v-if="spotify">
