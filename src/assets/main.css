@@ -4,6 +4,6 @@
 @import './base.css';
 
 ::selection {
-  background: var(--color-secondary);
-  color: var(--color-trinary);
+  background: theme('colors.gruvbox-gray');
+  color: theme('colors.gruvbox-milk');
 }

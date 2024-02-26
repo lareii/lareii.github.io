@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex justify-between mt-10 gap-5 text-sm text-[var(--color-secondary)]">
+  <div class="flex justify-between mt-10 gap-5 text-sm text-gruvbox-gray">
     <div class="flex gap-2">
       <font-awesome-icon :icon="['fas', 'code-branch']" class="mt-[3px]" />
       <div v-if="commit">{{ commit.sha.slice(0, 7) }} — {{ commit.commit.message }}</div>
