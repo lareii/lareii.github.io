@@ -45,7 +45,7 @@ onMounted(async () => {
   <div class="flex gap-10 mt-5 text-xl">
     <a href="https://github.com/lareii/" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
     <a href="https://www.linkedin.com/in/larei/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-    <a href="https://discord.gg/6FwNtZdbWH" target="_blank"><font-awesome-icon :icon="['fab', 'discord']" /></a>
+    <a href="https://discord.gg/taMRRAHb6y" target="_blank"><font-awesome-icon :icon="['fab', 'discord']" /></a>
     <a href="https://mastodon.com.tr/@larei" target="_blank" rel="me"><font-awesome-icon :icon="['fab', 'mastodon']" /></a>
   </div>
 </template>
