@@ -1,6 +1,6 @@
 ![](./public/screenshot.png)
 
-# lostf1sh.github.io
+# moli.lat
 🌐 My personal website.
 
 ## Getting Started
