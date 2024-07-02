@@ -10,16 +10,16 @@ export default {
   theme: {
     fontFamily: {
       sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
-      mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
+      mono: ['"Fira Code"', ...defaultTheme.fontFamily.mono],
     },
-    /* https://raw.githubusercontent.com/luisiacc/gruvbox-baby/main/extras/media/palettes/medium.svg */
+    /* https://raw.githubusercontent.com/luisiacc/catppuccin-baby/main/extras/media/palettes/medium.svg */
     colors: {
-      'gruvbox-dark': '#242424',
-      'gruvbox-gray': '#665c54',
-      'gruvbox-milk': '#e7d7ad',
-      'gruvbox-red': '#fb4934',
-      'gruvbox-green': '#98971a',
-      'gruvbox-yellow': '#fabd2f',
+      'catppuccin-dark': '#1e1e2e',
+      'catppuccin-gray': '#a6adc8',
+      'catppuccin-milk': '#bac2de',
+      'catppuccin-red': '#f38ba8',
+      'catppuccin-green': '#a6e3a1',
+      'catppuccin-yellow': '#fabd2f',
     },
     extend: {},
   },
