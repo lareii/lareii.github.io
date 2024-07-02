@@ -22,6 +22,6 @@ onMounted(async () => {
       <div v-if="commit">{{ commit.sha.slice(0, 7) }} — {{ commit.commit.message }}</div>
       <div v-else>latest commit could not be retrieved.</div>
     </div>
-    <a href="https://api.github.com/repos/lostf1sh/lostf1sh.github.io" target="_blank" class="whitespace-nowrap underline">i ❤️ boobs</a>
+    <a href="https://github.com/repos/lostf1sh/website" target="_blank" class="whitespace-nowrap underline">i ❤️ boobs</a>
   </div>
 </template>
