@@ -9,7 +9,7 @@ You can get started by cloning the project to your local machine. Make sure you 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/lostf1sh/lostf1sh.github.io
+git clone https://github.com/lostf1sh/website
 ```
 
 2. Navigate to the project folder:
