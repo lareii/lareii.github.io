@@ -1,16 +1,28 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const discordStatusColor = ref('text-catppuccin-gray');
 const spotify = ref(null);
 const discordStatus = ref('offline');
+const ws = ref(null);
 
-onMounted(async () => {
-  await fetch('https://api.lanyard.rest/v1/users/470904884946796544')
-    .then(response => response.json())
-    .then(data => {
-      spotify.value = data.data.spotify;
-      switch (data.data.discord_status) {
+const connectWebSocket = () => {
+  ws.value = new WebSocket('wss://api.lanyard.rest/socket');
+
+  ws.value.onopen = () => {
+    ws.value.send(JSON.stringify({
+      op: 2,
+      d: { subscribe_to_id: '470904884946796544' }
+    }));
+  };
+
+  ws.value.onmessage = (event) => {
+    const message = JSON.parse(event.data);
+    if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
+      const data = message.d;
+      
+      spotify.value = data.spotify;
+      switch (data.discord_status) {
         case 'online':
           discordStatusColor.value = 'text-catppuccin-green';
           discordStatus.value = 'online';
@@ -28,11 +40,27 @@ onMounted(async () => {
           discordStatus.value = 'offline';
           break;
       }
-    })
-    .catch(() => {
-      return;
-    });
-})
+    }
+  };
+
+  ws.value.onerror = (error) => {
+    console.error('WebSocket error', error);
+  };
+
+  ws.value.onclose = () => {
+    console.log('WebSocket connection closed');
+  };
+};
+
+onMounted(() => {
+  connectWebSocket();
+});
+
+onUnmounted(() => {
+  if (ws.value) {
+    ws.value.close();
+  }
+});
 </script>
 
 <template>
