@@ -11,8 +11,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "axios": "^1.7.2",
+    "simple-icons": "^13.0.0",
     "vue": "^3.4.15"
   },
   "devDependencies": {
