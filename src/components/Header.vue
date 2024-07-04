@@ -5,11 +5,14 @@ const discordStatusColor = ref('text-catppuccin-gray');
 const spotify = ref(null);
 const discordStatus = ref('offline');
 const ws = ref(null);
+let reconnectAttempts = 0;
+const maxReconnectAttempts = 5;
 
 const connectWebSocket = () => {
   ws.value = new WebSocket('wss://api.lanyard.rest/socket');
 
   ws.value.onopen = () => {
+    reconnectAttempts = 0;
     ws.value.send(JSON.stringify({
       op: 2,
       d: { subscribe_to_id: '470904884946796544' }
@@ -49,6 +52,10 @@ const connectWebSocket = () => {
 
   ws.value.onclose = () => {
     console.log('WebSocket connection closed');
+    if (reconnectAttempts < maxReconnectAttempts) {
+      setTimeout(connectWebSocket, Math.pow(2, reconnectAttempts) * 1000);
+      reconnectAttempts++;
+    }
   };
 };
 
