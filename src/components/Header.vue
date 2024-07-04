@@ -4,6 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const discordStatusColor = ref('text-catppuccin-gray');
 const spotify = ref(null);
 const discordStatus = ref('offline');
+const vscodeActivity = ref(null);
 const ws = ref(null);
 let reconnectAttempts = 0;
 const maxReconnectAttempts = 5;
@@ -23,8 +24,10 @@ const connectWebSocket = () => {
     const message = JSON.parse(event.data);
     if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
       const data = message.d;
-      
+
       spotify.value = data.spotify;
+      vscodeActivity.value = data.vscode; // Add VSCode handling
+
       switch (data.discord_status) {
         case 'online':
           discordStatusColor.value = 'text-catppuccin-green';
@@ -94,6 +97,12 @@ onUnmounted(() => {
     <font-awesome-icon :icon="['fab', 'discord']" class="mt-[3px]" />
     <div>
       i'm currently {{ discordStatus }} on discord.
+    </div>
+  </div>
+  <div v-if="vscodeActivity" class="flex gap-2 text-sm mt-2 text-catppuccin-blue">
+    <font-awesome-icon :icon="['fab', 'code']" class="mt-[3px]" />
+    <div>
+      i'm currently editing <strong>{{ vscodeActivity.file }}</strong> using {{ vscodeActivity.language }}.
     </div>
   </div>
   <div class="flex gap-10 mt-5 text-xl">
