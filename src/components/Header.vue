@@ -33,6 +33,9 @@ const connectWebSocket = () => {
         case "dnd":
           status.value = "text-gruvbox-red";
           break;
+        case "offline":
+          status.value = "text-gruvbox-gray";
+          break;
       }
 
       ws.value.onerror = (error) => {
