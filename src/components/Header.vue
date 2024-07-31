@@ -140,7 +140,7 @@ const vscodeStatus = computed(() => {
 });
 
 const connectWebSocket = () => {
-  ws.value = new WebSocket('wss://api.lanyard.rest/socket');
+  ws.value = new WebSocket('wss://api.moli.lat/socket');
 
   ws.value.onopen = () => {
     ws.value.send(JSON.stringify({
