@@ -2,6 +2,7 @@
 import Header from './components/Header.vue';
 import Uses from './components/Uses.vue';
 import Projects from './components/Projects.vue';
+import RecentTracks from './components/RecentTracks.vue';
 import Footer from './components/Footer.vue';
 </script>
 
@@ -12,6 +13,7 @@ import Footer from './components/Footer.vue';
     <div class="mb-10"><Uses /></div>
     <div class="z-0 absolute mt-10 text-[10rem] opacity-10 select-none">🏓</div>
     <div class="relative mb-10"><Projects /></div>
+    <div class="relative mb-10"><RecentTracks /></div>
     <Footer />
   </div>
 </template>
