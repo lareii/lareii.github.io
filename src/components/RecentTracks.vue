@@ -5,8 +5,8 @@
     <div v-else-if="error" class="text-catppuccin-red text-center">{{ error }}</div>
     <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
       <div
-        v-for="(track, index) in tracks"
-        :key="`${track.date?.uts || track.url}-${updateCounter}-${index}`"
+        v-for="track in displayedTracks"
+        :key="`${track.name}-${track.artist['#text']}-${updateCounter}`"
         class="border border-catppuccin-gray p-2 rounded-md bg-catppuccin-dark cursor-pointer text-center transition-all duration-300 hover:bg-catppuccin-milk hover:bg-opacity-20"
         @click="goToTrack(track.url)"
       >
@@ -14,6 +14,7 @@
         <div class="text-sm">
           <p class="font-bold mb-1 text-catppuccin-milk truncate" :title="track.name">{{ track.name }}</p>
           <p class="text-catppuccin-gray truncate" :title="track.artist['#text']">{{ track.artist['#text'] }}</p>
+          <p v-if="track['@attr']?.nowplaying" class="text-catppuccin-green">Now Playing</p>
         </div>
       </div>
     </div>
@@ -22,22 +23,48 @@
 
 <script>
 import { getRecentTracks } from '@/services/lastfmService';
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
   setup() {
-    const tracks = ref([]);
+    const allTracks = ref([]);
     const loading = ref(true);
     const error = ref(null);
     const updateCounter = ref(0);
     let updateInterval = null;
 
+    const displayedTracks = computed(() => {
+      let tracks = allTracks.value;
+      let currentTrack = tracks.find(track => track['@attr']?.nowplaying);
+      let recentTracks = tracks.filter(track => !track['@attr']?.nowplaying);
+
+      // Remove duplicates
+      const uniqueTracks = [];
+      const seen = new Set();
+      for (const track of recentTracks) {
+        const key = `${track.name}-${track.artist['#text']}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          uniqueTracks.push(track);
+        }
+      }
+
+      // If there's a current track, show it first and 5 recent tracks
+      if (currentTrack) {
+        return [currentTrack, ...uniqueTracks.slice(0, 5)];
+      } 
+      // If no current track, show 6 recent tracks
+      else {
+        return uniqueTracks.slice(0, 6);
+      }
+    });
+
     const fetchTracks = async () => {
       try {
         loading.value = true;
         const newTracks = await getRecentTracks();
-        tracks.value = newTracks;
-        updateCounter.value++;
+        allTracks.value = newTracks;
+        updateCounter.value++; // Force re-render
         error.value = null;
       } catch (err) {
         error.value = "Failed to load tracks. Please try again later.";
@@ -63,7 +90,7 @@ export default {
     });
 
     return {
-      tracks,
+      displayedTracks,
       loading,
       error,
       updateCounter,
