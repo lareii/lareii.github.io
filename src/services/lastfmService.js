@@ -1,6 +1,7 @@
 import axios from 'axios';
+import.meta.env.VITE_LASTFM_API_KEY;
 
-const apiKey = import.meta.env.VITE_LASTFM_API_KEY || process.env.LASTFM_API_KEY;
+const apiKey = process.env.LASTFM_API_KEY;
 const user = 'molishu';
 
 export const getRecentTracks = async () => {
