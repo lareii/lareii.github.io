@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = 'e1cc64bf9ca73271984dfa67078e0257';
+const apiKey = process.env.LASTFM_API_KEY;
 const user = 'molishu';
 
 export const getRecentTracks = async () => {
@@ -11,7 +11,7 @@ export const getRecentTracks = async () => {
                 user: user,
                 api_key: apiKey,
                 format: 'json',
-                limit: 5,
+                limit: 20,
             }
         });
         return response.data.recenttracks.track;
