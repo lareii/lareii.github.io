@@ -201,7 +201,7 @@ onUnmounted(() => {
 
 <template>
   <div class="font-sans font-black text-5xl">
-    moli.lat
+    f1sh.pics
   </div>
   <div>
     moli, 16 years-old. chef, professional table tennis player. hyprland enjoyer. 
