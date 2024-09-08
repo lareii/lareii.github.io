@@ -28,12 +28,14 @@ onMounted(async () => {
     <div v-if="!repos.length">projects could not be retrieved.</div>
     <a v-for="repo in repos" :href="repo.html_url" target="_blank"
       class="flex flex-col justify-between px-5 py-3 bg-[#202020]/[.3] border-[#504945] border-[0.5px] rounded-lg text-sm">
-      <div class="flex items-center gap-1 text-gruvbox-gray">
-        <img :src="repo.owner.avatar_url" class="rounded-full w-4">
-        {{ repo.owner.login }}
+      <div>
+        <div class="flex items-center gap-1 text-gruvbox-gray">
+          <img :src="repo.owner.avatar_url" class="rounded-full w-4">
+          {{ repo.owner.login }}
+        </div>
+        <div :class="['font-bold', 'text-lg', repo.archived ? 'line-through' : '']">{{ repo.name }}</div>
+        <div>{{ repo.description }}</div>
       </div>
-      <div :class="['font-bold', 'text-lg', repo.archived ? 'line-through' : '']">{{ repo.name }}</div>
-      <div>{{ repo.description }}</div>
       <div class="flex mt-2 gap-5">
         <div>
           <font-awesome-icon :icon="['fas', 'star']" />
