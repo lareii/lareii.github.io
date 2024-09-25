@@ -96,7 +96,5 @@ onUnmounted(() => {
     <a href="https://github.com/lareii/" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
     <a href="https://www.linkedin.com/in/larei/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
     <a href="https://discord.com/users/748539900793716887" target="_blank"><font-awesome-icon :icon="['fab', 'discord']" /></a>
-    <a href="https://mastodon.com.tr/@larei" target="_blank" rel="me"><font-awesome-icon
-        :icon="['fab', 'mastodon']" /></a>
   </div>
 </template>
