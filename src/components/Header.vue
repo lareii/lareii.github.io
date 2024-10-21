@@ -204,8 +204,8 @@ onUnmounted(() => {
     f1sh.pics
   </div>
   <div>
-    moli, 16 years-old. chef, professional table tennis player. hyprland enjoyer. 
-    sports, music, chemistry.
+    moli, aka duhan. 16 years-old. chef, professional table tennis player. hyprland enjoyer. 
+    sports, music, chemistry. contact : duhanyagmurdelikkulak@gmail.com
   </div>
   <div class="flex gap-2 items-center text-sm text-catppuccin-green">
     <font-awesome-icon :icon="['fab', 'spotify']" class="text-xl w-5 h-5" />
