@@ -70,7 +70,7 @@ onUnmounted(() => {
     babaoglu<span :class="['text-2xl', status]">.dev</span>
   </div>
   <div>
-    emirhan (aka larei), 18 years-old. self-taught developer,
+    emirhan (aka larei), 19 years-old. self-taught developer,
     <a href="https://www.youtube.com/watch?v=9sJUDx7iEJw" target="_blank" class="underline">open-source</a>
     enthusiast. programming, music, math.
   </div>
