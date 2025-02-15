@@ -67,7 +67,7 @@ onUnmounted(() => {
 
 <template>
   <div class="font-sans font-black text-5xl">
-    babaoglu<span :class="['text-2xl', status]">.dev</span>
+    lareii<span :class="['text-2xl', status]">github.io</span>
   </div>
   <div>
     emirhan (aka larei), self-taught developer,
