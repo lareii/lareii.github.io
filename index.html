@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
-    <title>f1sh.pics /</title>
+    <title>Moli's Personal Website | f1sh.pics</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="moli's personal website.">
-    <meta name="keywords" content="moli, fish, lostfish, molishu">
-    <meta name="author" content="moli">
-    <meta name="url" content="https://moli.lat ">
-    <meta name="identifier-URL" content="https://moli.lat ">
-    <meta name="twitter:title" content="moli.lat ">
-    <meta name="twitter:description" content="moli's personal website.">
-    <meta name="twitter:image" content="/screenshot.png">
-    <meta name="twitter:card" content="/screenshot.png">
-    <meta property="og:title" content="moli.lat ">
-    <meta property="og:description" content="moli's personal website.">
-    <meta property="og:image" content="/screenshot.png" />
-    <meta property="og:url" content="https://moli.lat ">
-    <meta property="og:site_name" content="moli.lat ">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Moli's Personal Website | f1sh.pics">
+    <meta name="description" content="Personal portfolio and creative space of Moli, showcasing projects, photography, and digital experiences.">
+    <meta name="keywords" content="moli, personal website, portfolio, photography, developer, creative, lostfish, digital portfolio">
+    <meta name="author" content="Moli">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://moli.lat">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moli.lat">
+    <meta property="og:title" content="Moli's Personal Website | f1sh.pics">
+    <meta property="og:description" content="Personal portfolio and creative space of Moli, showcasing projects, photography, and digital experiences.">
+    <meta property="og:image" content="/screenshot.png">
+    <meta property="og:site_name" content="f1sh.pics">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://moli.lat">
+    <meta name="twitter:title" content="Moli's Personal Website | f1sh.pics">
+    <meta name="twitter:description" content="Personal portfolio and creative space of Moli, showcasing projects, photography, and digital experiences.">
+    <meta name="twitter:image" content="/screenshot.png">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/main.js" as="script">
+    
+    <!-- Accessibility -->
+    <meta name="theme-color" content="#11111b">
   </head>
-  <body class="overflow-x-hidden bg-catppuccin-dark text-catppuccin-milk font-mono">
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="overflow-x-hidden bg-catppuccin-crust text-catppuccin-text font-mono antialiased">
+    <div id="app" role="main"></div>
+    <script type="module" src="/src/main.js" defer></script>
   </body>
 </html>
