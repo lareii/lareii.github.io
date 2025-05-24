@@ -8,6 +8,7 @@ const spotify = ref(null);
 const discordStatus = ref('offline');
 const vscodeActivity = ref(null); // Using user's variable name
 const ws = ref(null);
+const heartbeatIntervalId = ref(null); // For Lanyard heartbeat
 
 // Removed fetchLanguageColors, getLanguageFromFile, languageColors, and currentLanguageColor
 
@@ -42,7 +43,19 @@ const connectWebSocket = () => {
   ws.value.onmessage = (event) => {
     try {
       const message = JSON.parse(event.data);
-      if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
+
+      // Handle Lanyard opcodes
+      if (message.op === 1) { // Opcode 1: Hello
+        const heartbeatInterval = message.d.heartbeat_interval;
+        if (heartbeatIntervalId.value) {
+          clearInterval(heartbeatIntervalId.value);
+        }
+        heartbeatIntervalId.value = setInterval(() => {
+          if (ws.value && ws.value.readyState === WebSocket.OPEN) {
+            ws.value.send(JSON.stringify({ op: 3 }));
+          }
+        }, heartbeatInterval);
+      } else if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
         const data = message.d;
         if (!data) return;
 
@@ -92,6 +105,10 @@ const connectWebSocket = () => {
     spotify.value = null;
     discordStatus.value = 'offline';
     discordStatusColor.value = 'text-catppuccin-subtle';
+    if (heartbeatIntervalId.value) {
+      clearInterval(heartbeatIntervalId.value);
+      heartbeatIntervalId.value = null;
+    }
   };
 };
 
@@ -102,7 +119,12 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (ws.value) {
-    ws.value.close();
+    ws.value.close(); // This will trigger onclose, which clears the interval
+  }
+  // Fallback clear just in case onclose isn't triggered reliably before unmount
+  if (heartbeatIntervalId.value) {
+    clearInterval(heartbeatIntervalId.value);
+    heartbeatIntervalId.value = null;
   }
 });
 </script>
