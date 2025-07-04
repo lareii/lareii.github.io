@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const projects = ['lareii.github.io', 'copl.uk', 'FdF', 'colorify']
+const projects = ['lareii.github.io', 'copl.uk', 'FdF', 'cub3D']
 const repos = ref([]);
 
 onMounted(async () => {
