@@ -1,0 +1,54 @@
+header {
+  margin: 50px 0 50px 0;
+}
+
+body {
+  background-color: #f3eeea;
+  color: #424242;
+  width: 600px;
+  margin: 0 auto 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  margin: 50px 0 50px 0;
+  color: #626264;
+  font-size: 11px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+.quote {
+  border-left: 1px solid #626264;
+  padding-left: 15px;
+  margin: 20px 0 20px 0;
+}
+
+.muted {
+  color: #626264;
+}
+
+.small {
+  font-size: 13px;
+}
+
+code {
+  padding: 3px 5px 3px 5px;
+  border-radius: 5px;
+  background-color: #cecac7;
+  font-family: monospace;
+}
